@@ -1,5 +1,5 @@
 #!/bin/bash
-# This script is used to run the CP problems.
+# This script is used to create folder structure
 
 # If README.md not exist then create it
 if [ ! -f "README.md" ]; then
@@ -52,12 +52,7 @@ endforeach()
 fi
 
 
-cd CMake
-cmake .
-make $1
-
-cd ..
-/usr/bin/time -f "\n___________________\nScore result\n\nreal %es\nuser %Us \nsys  %Ss \nmemory:%MKB \ncpu %P \n-------------------" \
-./build/$1 < "./io/input.txt" > "./io/output.txt"
-
-
+# If test dir not exist then create it
+if [ ! -d "test" ]; then
+    mkdir test
+fi
