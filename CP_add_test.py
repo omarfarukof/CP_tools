@@ -22,3 +22,4 @@ def add_test(file , case_in , case_out):
     open("test/" + file + "/" + str(new_case_num) + "_in.txt" , "w").write(case_in).close()
     open("test/" + file + "/" + str(new_case_num) + "_out.txt" , "w").write(case_out).close()
     
+# Add test cases
